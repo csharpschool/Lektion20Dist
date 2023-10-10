@@ -1,0 +1,35 @@
+﻿@page "/"
+@using Lektion20Dist.Classes;
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+@code{
+        /*class code
+        {
+        virtual protected void OnInitialized()
+            {
+            // Egen kod
+    }
+    }*/
+
+    Animal giraffe = new();
+    //Mammal cat = new();
+    Dog doggy = new();
+
+    protected override void OnInitialized()
+    {
+        //giraffe.Eat();
+        //giraffe.NameAnimal("Sture");
+        //giraffe.Name  // Går inte pga protected
+
+        //cat.Eat();
+        //cat.NameAnimal("Spotty");
+        //cat.Name // Går inte pga protected
+
+        doggy.NameAnimal("Max");
+        var name = doggy.GetName();
+        doggy.Run();
+    }
+}
